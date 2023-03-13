@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 def get_app_debug_info():
-    cfg_items = {k: v for k, v in os.environ.items()}
+    cfg_items = dict(os.environ.items())
     cfg_items['datetime'] = datetime.now().isoformat()
     return cfg_items
 
